@@ -189,6 +189,15 @@
             titleView.py_width = self.view.py_width - self.cancelButtonWidth - titleView.py_x * 2 - 3;
         }
     }
+    if (@available(iOS 15.0, *)) {
+                UINavigationBarAppearance *barApp = [UINavigationBarAppearance new];
+        barApp.backgroundColor =  [UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1];
+                barApp.backgroundEffect = nil;
+//                barApp.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+                self.navigationController.navigationBar.scrollEdgeAppearance = barApp;
+                self.navigationController.navigationBar.standardAppearance = barApp;
+        NSLog(@"%@",self.navigationController);
+            }
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
