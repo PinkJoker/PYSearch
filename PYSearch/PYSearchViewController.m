@@ -154,7 +154,7 @@
         [titleLabel sizeToFit];
         
         backButton.py_height = navigationBar.py_height;
-        backButton.py_width = titleLabel.py_width + imageView.py_width / 2.0 + backButtonLayoutMargins.left + backButtonLayoutMargins.right;
+        backButton.py_width = titleLabel.py_width + imageView.py_width  + backButtonLayoutMargins.left + backButtonLayoutMargins.right;
         adaptWidth = backButton.py_width + 8;
     } else { // Default is PYSearchViewControllerShowModeModal
         [cancelButton sizeToFit];
